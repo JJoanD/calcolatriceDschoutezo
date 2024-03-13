@@ -1,0 +1,74 @@
+<p>calcolatrice works!</p>
+
+<div class="contenitore">
+
+    <div fxLayout="row" fxLayoutAlign="space-around center"  >
+
+        <div fxFlex="10" id="number">7</div>
+        <div fxFlex="10" id="number">8</div>
+        <div fxFlex="10" id="number">9</div>
+
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-around center"  >
+
+        <div fxFlex="10" id="number">4</div>
+        <div fxFlex="10" id="number">5</div>
+        <div fxFlex="10" id="number">6</div>
+
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-around center"  >
+
+        <div fxFlex="10" id="number">1</div>
+        <div fxFlex="10" id="number">2</div>
+        <div fxFlex="10" id="number">3</div>
+
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-around center"  >
+
+        <div fxFlex="10" id="number">1</div>
+        <div fxFlex="10" id="number">2</div>
+        <div fxFlex="10" id="number">3</div>
+
+    </div>
+
+</div>
+
+<div class="contenitore">
+<div> 
+    <input id="area" fxFlex="fxFill" type="text" readonly value="{{output}}"/>  
+</div>
+   
+<mat-grid-list cols="5" rowHeight="2:1" gutterSize="6px">
+
+    <mat-grid-tile (click)="click(7)">7</mat-grid-tile>
+    <mat-grid-tile (click)="click(8)">8</mat-grid-tile>
+    <mat-grid-tile (click)="click(9)">9</mat-grid-tile>
+    <mat-grid-tile (click)="clickAdd()">+</mat-grid-tile>
+    <mat-grid-tile >Back</mat-grid-tile>
+
+    <mat-grid-tile (click)="click(4)">4</mat-grid-tile>
+    <mat-grid-tile (click)="click(5)">5</mat-grid-tile>
+    <mat-grid-tile (click)="click(6)">6</mat-grid-tile>
+    <mat-grid-tile (click)="clickSubstract()">-</mat-grid-tile>
+    <mat-grid-tile>Ans</mat-grid-tile>
+
+    <mat-grid-tile (click)="click(1)">1</mat-grid-tile>
+    <mat-grid-tile (click)="click(2)">2</mat-grid-tile>
+    <mat-grid-tile (click)="click(3)">3</mat-grid-tile>
+    <mat-grid-tile (click)=" clickMultiply()">x</mat-grid-tile>
+    <mat-grid-tile>M+</mat-grid-tile>
+
+    <mat-grid-tile (click)="click(0)">0</mat-grid-tile>
+    <mat-grid-tile>.</mat-grid-tile>
+    <mat-grid-tile>EXP</mat-grid-tile>
+    <mat-grid-tile (click)="clickDivision()">/</mat-grid-tile>
+    <mat-grid-tile>M-</mat-grid-tile>
+
+    <mat-grid-tile>+-</mat-grid-tile>
+    <mat-grid-tile>RND</mat-grid-tile>
+    <mat-grid-tile (click)="clickAC()">AC</mat-grid-tile>
+    <mat-grid-tile (click)="clickResult()">=</mat-grid-tile>
+    <mat-grid-tile>MR</mat-grid-tile>
+</mat-grid-list>
+
+</div>  
